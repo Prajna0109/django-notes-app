@@ -3,9 +3,10 @@ pipeline{
     agent any
     
     stages{
-        stage("Code clone"){
+        stage("Checkout"){
             steps{
-                clone("https://github.com/LondheShubham153/django-notes-app.git","main")
+                //clone("https://github.com/LondheShubham153/django-notes-app.git","main")
+                checkout scm
                 echo "Cloned successfully"
             }
         }
